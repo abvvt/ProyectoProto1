@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Puentes Educativos - Plataforma Colaborativa para la Inclusión</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <meta name="title" content="Puentes Educativos - Plataforma Colaborativa para la Inclusión">
+    <meta name="description"
+        content="Plataforma de creación colaborativa de materiales en LSM y Audio Descripción para adaptar clases universitarias.">
+
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="loading-container" data-loading-container>
+        <div class="loading-circle"></div>
+    </div>
+
+
+    <header class="header" data-header>
+        <div class="container">
+
+            <a href="#" class="logo">
+                <img src="https://img.icons8.com/?size=100&id=7282&format=png&color=FA5252" width="50" height="30" alt="Puentes Educativos home">
+            </a>
+
+            <nav class="navbar" data-navbar>
+                <!-- Mejora en el botón de cerrar menú -->
+                <button class="nav-close-btn" aria-label="Cerrar menú de navegación" data-nav-toggler role="button">
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+                <a href="#" class="logo">
+                    <img src="https://img.icons8.com/?size=100&id=7282&format=png&color=FA5252" width="50" height="30"
+                        alt="Puentes Educativos home">
+                </a>
+
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link" data-nav-link>Inicio</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link" data-nav-link>Acerca de Nosotros</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link" data-nav-link>Contenidos</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link" data-nav-link>Colabora</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link" data-nav-link>Contacto</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Mejora en el botón de perfil -->
+            <div class="header-action">
+                <button class="cart-btn" aria-label="Mi perfil" role="button">
+                    <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+                <a href="#" class="btn btn-primary has-after">Acceder / Registrarse</a>
+            </div>
+
+            <!-- Mejora en el botón de menú -->
+            <button class="nav-open-btn" aria-label="Abrir menú de navegación" data-nav-toggler role="button">
+                <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+            </button>
+
+            <div class="overlay" data-overlay data-nav-toggler></div>
+
+        </div>
+    </header>
+
+
+    <main>
+        <article>
+
+            <section class="section hero has-bg-image" aria-label="inicio"
+                style="background-image: url('./assets/images/hero-bg.png')">
+                <div class="container">
+
+                    <div class="hero-content" data-reveal="left">
+                        <h1 class="h1 hero-title">Puentes Educativos: Clases Universitarias para Todos</h1>
+
+                        <p class="hero-text">
+                            Transformando la educación superior con materiales adaptados en Lengua de Señas Mexicana
+                            (LSM) y Audio Descripción. ¡La inclusión es posible!
+                        </p>
+
+                        <a href="#" class="btn btn-secondary has-after">Explorar Contenidos</a>
+                    </div>
+
+                    <figure class="hero-banner" data-reveal>
+                        <img src="./assets/images/hero-puentes-educativos.png" width="680" height="720"
+                            alt="Estudiantes inclusivos" class="w-100">
+
+                        <!-- Mejora en imágenes decorativas -->
+                        <img src="./assets/images/hero-shape-1.svg" width="338" height="138" alt="" class="shape shape-1">
+                        <img src="./assets/images/hero-shape-2.svg" width="237" height="80" alt="" class="shape shape-2">
+
+                    </figure>
+
+                </div>
+            </section>
+
+
+            <section class="section instruction" aria-labelledby="instruction-label">
+                <div class="container">
+
+                    <h2 class="h2 section-title" id="instruction-label" data-reveal>¿Cómo Funciona Puentes Educativos?
+                    </h2>
+
+                    <p class="section-text" data-reveal>
+                        Nuestra plataforma facilita la adaptación colaborativa de clases universitarias en tres pasos
+                        sencillos.
+                    </p>
+
+                    <ul class="grid-list">
+
+                        <li data-reveal="left">
+                            <div class="instruction-card">
+
+                                <figure class="card-banner">
+                                    <img src="https://img.icons8.com/?size=100&id=41qMbxehez2N&format=png&color=000000" width="50" height="30"
+                                        loading="lazy" alt="Solicita una Adaptación" class="w-100">
+                                </figure>
+
+                                <div class="card-content">
+
+                                    <h3 class="h5 card-title">
+                                        <span class="span">01</span>
+                                        Solicita o Sube Contenido
+                                    </h3>
+
+                                    <p class="card-text">
+                                        Estudiantes o profesores pueden solicitar adaptaciones de clases existentes o
+                                        subir materiales para ser adaptados.
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li data-reveal>
+                            <div class="instruction-card">
+
+                                <figure class="card-banner">
+                                    <img src="https://img.icons8.com/?size=100&id=o3zCJnjkUG3q&format=png&color=000000" width="50" height="25"
+                                        loading="lazy" alt="Colabora en la Adaptación" class="w-100">
+                                </figure>
+
+                                <div class="card-content">
+
+                                    <h3 class="h5 card-title">
+                                        <span class="span">02</span>
+                                        Colabora en la Adaptación
+                                    </h3>
+
+                                    <p class="card-text">
+                                        Intérpretes de LSM, audiodescriptores y voluntarios trabajan juntos para crear
+                                        materiales accesibles.
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li data-reveal="right">
+                            <div class="instruction-card">
+
+                                <figure class="card-banner">
+                                    <img src="https://img.icons8.com/?size=100&id=DFXf9CtoAX6w&format=png&color=000000" width="50" height="30"
+                                        loading="lazy" alt="Accede al Material Adaptado" class="w-100">
+                                </figure>
+
+                                <div class="card-content">
+
+                                    <h3 class="h5 card-title">
+                                        <span class="span">03</span>
+                                        Accede al Material Adaptado
+                                    </h3>
+
+                                    <p class="card-text">
+                                        Los materiales finales están disponibles para todos los estudiantes, promoviendo
+                                        un aprendizaje inclusivo.
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </section>
+
+
+            <section class="section top-restaurant" aria-labelledby="featured-content-label">
+                <div class="container">
+
+                    <ul class="grid-list">
+
+                        <li data-reveal="left">
+                            <h2 class="h2 section-title" id="featured-content-label">
+                                Contenidos Destacados y Clases Adaptadas
+                            </h2>
+
+                            <p class="section-text">
+                                Explora los materiales más recientes y populares adaptados por nuestra comunidad.
+                            </p>
+                        </li>
+
+                        <li data-reveal="right">
+                            <div class="restaurant-card">
+                                <div class="card-icon">
+                                    <img src="./assets/images/course-math.jpg" width="100" height="100" loading="lazy"
+                                        alt="Contenido" class="w-100">
+                                </div>
+                                <a href="#" class="btn btn-secondary has-after">
+                                    <span class="span">Suscríbete para actualizaciones</span>
+                                </a>
+                                <p>Sé el primero en saber cuándo lanzamos nuevos cursos accesibles.</p>
+            </section>
+
+
+            <section class="section cta has-bg-image" aria-labelledby="cta-label"
+                style="background-image: url('./assets/images/hero-bg.png')">
+                <div class="container">
+
+                    <figure class="cta-banner" data-reveal="left">
+                        <img src="./assets/images/cta-community.png" width="680" height="704" loading="lazy"
+                            alt="Únete a la comunidad" class="w-100">
+                    </figure>
+
+                    <div class="cta-content" data-reveal="right">
+
+                        <h2 class="h3 section-title" id="cta-label">
+                            Sé parte del cambio: ¡Únete a la comunidad de Puentes Educativos!
+                        </h2>
+
+                        <p class="section-text">
+                            Ya seas estudiante, profesor, intérprete de LSM o audiodescriptor, tu contribución es
+                            invaluable para crear un futuro educativo más inclusivo.
+                        </p>
+
+                        <a href="#" class="btn btn-primary has-after">¡Quiero Colaborar!</a>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section testi" aria-labelledby="testi-label">
+                <div class="container">
+
+                    <div class="testi-content" data-reveal="left">
+
+                        <h2 class="h2 section-title" id="testi-label">¿Por qué Puentes Educativos?</h2>
+
+                        <blockquote class="testi-text">
+                            "Actualmente, muchos estudiantes sordos enfrentan barreras significativas para acceder a la
+                            educación superior. Puentes Educativos nace para superar estos desafíos, ofreciendo apoyo
+                            integral en LSM y haciendo que las clases de ingeniería, y más allá, sean totalmente
+                            accesibles."
+                        </blockquote>
+
+                        <div class="wrapper">
+                            <img src="./assets/images/testi-student.jpg" width="70" height="70" loading="lazy"
+                                alt="......" class="author-img">
+
+                            <div>
+                                <p class="author-title">Equipo summit four</p>
+                                <p class="author-role">Estudiantes UNRC</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <figure class="testi-banner" data-reveal="right">
+                        <img src="./assets/images/testimonial-puentes-educativos.png" width="680" height="588"
+                            alt="estudiantes interactuando" class="w-100">
+                    </figure>
+
+                </div>
+            </section>
+
+
+            <section class="section partnership" aria-label="colaboración">
+                <div class="container">
+
+                    <h2 class="h2 section-title" data-reveal>¿Interesado en una Alianza Educativa?</h2>
+
+                    <ul class="grid-list">
+
+                        <li data-reveal="left">
+                            <div class="partnership-card">
+
+                                <figure class="card-banner img-holder" style="--width: 640; --height: 402;">
+                                    <img src="https://img.icons8.com/?size=100&id=sQfkLauD3QeP&format=png&color=#000000" width="55" height="30"
+                                        loading="lazy" alt="Únete como Universidad" class="img-cover">
+                                </figure>
+
+                                <div class="card-content">
+                                    <h3 class="h5 card-title">Para Universidades e Instituciones</h3>
+
+                                    <a href="#" class="btn btn-primary has-after">
+                                        <span class="span">Más Información</span>
+
+                                        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li data-reveal="right">
+                            <div class="partnership-card">
+
+                                <figure class="card-banner img-holder" style="--width: 640; --height: 402;">
+                                    <img src="https://img.icons8.com/?size=100&id=85038&format=png&color=1A1A1A"width="55" height="30"
+                                        loading="lazy" alt="Voluntarios y Expertos" class="img-cover">
+                                </figure>
+
+                                <div class="card-content">
+                                    <h3 class="h5 card-title">Para Voluntarios y Expertos</h3>
+
+                                    <a href="#" class="btn btn-primary has-after">
+                                        <span class="span">Quiero Ayudar</span>
+
+                                        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </section>
+
+
+            <section class="section newsletter" aria-label="boletín">
+                <div class="container">
+
+                    <figure class="newsletter-banner" data-reveal="left">
+                        <img src="./assets/images/newsletter-updates.png" width="680" height="405" loading="lazy"
+                            alt="Ilustración de actualizaciones" class="w-100">
+                    </figure>
+
+                    <div class="newsletter-content" data-reveal="right">
+                        <h2 class="h4 section-title">
+                            Mantente al día con las últimas adaptaciones y novedades
+                        </h2>
+
+                        <!-- Mejora en el formulario de newsletter -->
+                        <form class="input-wrapper" aria-label="Formulario de suscripción al boletín">
+                            <label for="newsletter-email" class="visually-hidden">Correo electrónico</label>
+                            <input id="newsletter-email" type="email" name="email_address" placeholder="Ingresa tu correo electrónico"
+                                required class="input-field" autocomplete="email">
+                            <button type="submit" class="btn btn-primary has-after" aria-label="Suscribirse al boletín">
+                                <ion-icon name="notifications-outline" aria-hidden="true"></ion-icon>
+                                <span class="span">Suscribirse</span>
+                            </button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="section footer-top grid-list">
+
+                <div class="footer-brand">
+
+                    <a href="#" class="logo">
+                        <img src="./assets/images/logo-puentes-educativos-footer.svg" width="148" height="38"
+                            alt="Puentes Educativos home">
+                    </a>
+
+                    <h2 class="h2 section-title">Construyendo Puentes hacia la Educación Inclusiva</h2>
+
+                    <p class="section-text">
+                        Nuestra misión es hacer que el conocimiento universitario sea accesible para todos a través de
+                        la colaboración y la tecnología.
+                    </p>
+
+                </div>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title h5">Navegación</p>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <span class="span">Inicio</span>
+
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <span class="span">Acerca de Nosotros</span>
+
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <span class="span">Contenidos</span>
+
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <span class="span">Colabora</span>
+
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <span class="span">Contacto</span>
+
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title h5">Contacto</p>
+                    </li>
+
+                    <li>
+                        <address class="address">
+                            <ion-icon name="location" aria-hidden="true"></ion-icon>
+
+                            <span class="span">Ciudad de México, México</span>
+                        </address>
+                    </li>
+
+                    <li>
+                        <a href="mailto:info@puenteseducativos.org" class="footer-link">
+                            <ion-icon name="mail" aria-hidden="true"></ion-icon>
+
+                            <span class="span">info@puenteseducativos.org</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tel:+525512345678" class="footer-link">
+                            <ion-icon name="call" aria-hidden="true"></ion-icon>
+
+                            <span class="span">+52 55 00 00 00 00</span> </a>
+                    </li>
+
+                    <li>
+                        <ul class="social-list">
+
+                            <li>
+                                <a href="#" class="social-link">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="social-link">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="social-link">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p class="copyright">
+                    Copyright 2025 Puentes Educativos. Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="./assets/js/script.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
