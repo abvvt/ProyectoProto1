@@ -1,0 +1,695 @@
+/* Variables CSS para facilitar el cambio de colores y fuentes */
+:root {
+    --primary-color: #2e7d32; /* Un verde oscuro similar al de la imagen */
+    --secondary-color: #4caf50; /* Un verde más claro para acentos */
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --dark-gray: #555;
+    --white: #fff;
+    --font-family: 'Arial', sans-serif; /* O la fuente que elijas, si usas Google Fonts, impórtala primero */
+}
+
+/* Estilos globales y reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Fundamental para el control de los tamaños */
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+    /* Una buena práctica: suavizar el scroll */
+    scroll-behavior: smooth; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Asegura espacio a los lados en pantallas pequeñas */
+}
+
+/* Header y Navegación */
+header {
+    background-color: var(--white);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-gray);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    /* Añadir z-index si tienes elementos que podrían superponerse al header */
+    position: relative; /* O fixed/sticky si quieres que el header se quede */
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Ya estaba, pero lo reafirmo para coherencia con .container */
+    margin: 0 auto;
+    padding: 0 20px; /* También para consistencia */
+}
+
+.logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    /* Evita que el color cambie al hacer click o visitar el enlace */
+    -webkit-tap-highlight-color: transparent; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 0; /* Un pequeño padding para un área de clic más grande */
+    display: block; /* Para que el padding funcione en toda el área */
+}
+
+nav ul li a:hover,
+nav ul li a:focus { /* Añadir estado focus para accesibilidad */
+    color: var(--primary-color);
+}
+
+/* Sección Hero */
+.hero {
+    background-color: #e8f5e9; /* Un tono de verde muy claro para el fondo del hero */
+    padding: 80px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50vh; /* Asegura que el hero ocupe al menos la mitad de la pantalla */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px; /* Asegura padding en el contenido interno también */
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: var(--dark-gray);
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas pequeñas */
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Añadir border-color */
+    white-space: nowrap; /* Evita que el texto del botón se rompa */
+}
+
+.button.primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 2px solid var(--primary-color); /* Definir el borde explícitamente */
+}
+
+.button.primary:hover {
+    background-color: #216d25; /* Tono más oscuro al pasar el mouse */
+    border-color: #216d25; /* Mantener la coherencia del borde */
+}
+
+.button.secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.button.secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    /* Esto ya está implícito si border-color sigue primary-color, pero por si acaso */
+    border-color: var(--primary-color); 
+}
+
+/* Sección de Herramientas */
+.tools-section {
+    padding: 80px 20px; /* Asegura padding en los lados */
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tools-section h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.tools-section .section-description {
+    font-size: 1.1em;
+    color: var(--dark-gray);
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; /* Asegura padding en la descripción */
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 20px; /* Asegura padding para el grid */
+}
+
+.tool-item {
+    background-color: var(--light-gray);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Asegúrate de que el contenido no desborde */
+    overflow: hidden; 
+}
+
+.tool-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.tool-icon {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.tool-item h3 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.tool-item p {
+    color: var(--dark-gray);
+    font-size: 0.95em;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color); /* Color de fondo definido por variable */
+    color: var(--white); /* Color del texto definido por variable */
+    padding: 25px 0; /* Espaciado interno superior e inferior */
+    margin-top: 50px; /* Margen superior para separarlo del contenido de arriba */
+    text-align: center; /* Centra el texto del footer como un todo (útil para el copyright) */
+}
+
+/* Contenedor principal para las secciones del footer (Marca, Listas, etc.) */
+.footer-content {
+    display: flex; /* Convierte el contenedor en un flex container */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea en pantallas pequeñas */
+    
+    /* AJUSTE CLAVE 1: Distribuye el espacio para empujar los elementos a los extremos y centrar el del medio */
+    justify-content: space-between; 
+    
+    /* AJUSTE CLAVE 2: Alinea los elementos al inicio (parte superior) del contenedor */
+    align-items: flex-start; 
+    
+    padding: 0 20px; /* Espaciado horizontal interno */
+    max-width: 1200px; /* Limita el ancho máximo para legibilidad */
+    margin: 0 auto; /* Centra el contenido del footer en la página */
+    gap: 30px; /* Espacio entre las columnas (secciones) del footer */
+    
+    /* AJUSTE CLAVE 3: Alineación del texto dentro de las columnas (generalmente se quiere a la izquierda) */
+    text-align: left; 
+}
+
+/* Sección de la marca o logo del footer */
+.footer-brand {
+    /* flex-grow, flex-shrink, flex-basis: Permite crecer, encoger y sugiere un ancho base */
+    flex: 1 1 300px; /* Intenta ser 300px, pero puede crecer o encoger */
+    min-width: 250px; /* Ancho mínimo para que no se vea demasiado estrecho */
+    max-width: 350px; /* Ancho máximo para que no ocupe demasiado espacio */
+    margin-bottom: 20px; /* Espacio debajo de esta sección en pantallas pequeñas */
+    text-align: left; /* Asegura que el texto dentro de la marca esté alineado a la izquierda */
+}
+
+.footer-brand .logo {
+    display: inline-block; /* Ayuda con la alineación del logo */
+    margin-bottom: 15px; /* Espacio debajo del logo */
+}
+
+.footer-brand h2 {
+    font-size: 1.5em; /* Tamaño del título de la marca */
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.footer-brand p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 0; /* Elimina el margen por defecto del párrafo */
+}
+
+/* Listas de enlaces o información del footer */
+.footer-list {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    margin-bottom: 20px; /* Espacio debajo de la lista en pantallas pequeñas */
+    
+    /* flex-grow, flex-shrink, flex-basis: Similar al brand, para distribución pareja */
+    flex: 1 1 200px; /* Intenta ser 200px, pero puede crecer o encoger */
+}
+
+.footer-list-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: var(--white); /* Asegura que el color del título sea consistente */
+}
+
+.footer-list li {
+    margin-bottom: 8px; /* Espacio entre los ítems de la lista */
+}
+
+.footer-link,
+.address {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9em;
+    display: flex; /* Para alinear el ícono con el texto */
+    align-items: center; /* Centra verticalmente ícono y texto */
+}
+
+.footer-link i,
+.address i {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+/* Contenedor de enlaces de redes sociales */
+.social-links-container {
+    margin-top: 15px; /* Espacio encima de los íconos sociales */
+}
+
+.social-list {
+    display: flex; /* Coloca los íconos socialmente en línea */
+    gap: 15px; /* Espacio entre los íconos sociales */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-link {
+    font-size: 1.5em; /* Tamaño de los íconos */
+    color: var(--white);
+    transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.social-link:hover {
+    color: var(--secondary-color); /* Ejemplo de color al pasar el mouse */
+}
+
+/* Sección inferior del footer (copyright) */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Línea separadora */
+    padding-top: 15px;
+    margin-top: 25px;
+    font-size: 0.85em;
+    text-align: center; /* Asegura que el copyright esté centrado */
+}
+
+---
+
+### Diseño Adaptativo (Responsive Design)
+
+```css
+/* Media Query para pantallas medianas (ej. tabletas, laptops pequeñas) */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Apila las columnas verticalmente */
+        align-items: center; /* Centra los elementos apilados */
+        text-align: center; /* Centra el texto dentro de las columnas apiladas */
+        padding: 0 15px; /* Ajusta el padding horizontal para pantallas más pequeñas */
+    }
+
+    .footer-brand,
+    .footer-list {
+        /* Cuando se apilan, los elementos toman todo el ancho disponible */
+        flex: 0 0 auto; /* No crecer, no encoger, base automática */
+        min-width: unset; /* Elimina la restricción de ancho mínimo al apilar */
+        max-width: 90%; /* Limita el ancho máximo para legibilidad en móviles */
+        width: 100%; /* Permite que tomen el 100% del ancho disponible */
+        margin-bottom: 30px; /* Más espacio entre las secciones apiladas */
+    }
+
+    .footer-brand .logo {
+        margin-bottom: 10px;
+    }
+
+    .footer-list li {
+        margin-bottom: 10px; /* Ajusta el espaciado para los ítems de lista apilados */
+    }
+
+    .footer-list-title {
+        margin-bottom: 10px;
+    }
+
+    .social-list {
+        justify-content: center; /* Centra los íconos sociales al apilar */
+    }
+}
+
+/* Media Query para pantallas pequeñas (ej. móviles) */
+@media (max-width: 480px) {
+    .footer-brand h2 {
+        font-size: 1.3em;
+    }
+    .footer-brand p {
+        font-size: 0.8em;
+    }
+    .footer-link,
+    .address {
+        font-size: 0.85em;
+    }
+    .social-link {
+        font-size: 1.3em;
+    }
+}
+/* --- CTA Section --- */
+.cta-section {
+    background-color: var(--light-gray); /* Or a specific image from your HTML */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Space between content and banner */
+    max-width: 1200px;
+    margin: 0 auto 50px auto; /* Centering and bottom margin */
+    border-radius: 10px; /* Optional: adds rounded corners */
+    overflow: hidden; /* Ensures image doesn't overflow rounded corners */
+}
+
+.cta-content {
+    flex: 1 1 450px; /* Allows content to grow, minimum 450px width */
+    text-align: center;
+    padding: 20px;
+}
+
+.cta-content h2 {
+    font-size: 2.8em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.cta-content p {
+    font-size: 1.1em;
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+    max-width: 600px; /* Keeps paragraph readable */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-banner {
+    flex: 1 1 400px; /* Allows banner to grow, minimum 400px width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: matches section border-radius */
+}
+
+/* --- Testimonial Section --- */
+.testimonial-section {
+    padding: 80px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: var(--white);
+}
+
+.testimonial-content {
+    flex: 1 1 500px;
+    text-align: left;
+    padding: 20px;
+}
+
+.testimonial-content h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.testimonial-content blockquote {
+    font-size: 1.3em;
+    font-style: italic;
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+    line-height: 1.6;
+    border-left: 5px solid var(--secondary-color);
+    padding-left: 20px;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+}
+
+.author-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--primary-color);
+}
+
+.author-role {
+    color: var(--dark-gray);
+    font-size: 0.9em;
+}
+
+.testimonial-banner {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* --- Partnership Section --- */
+.partnership-section {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+}
+
+.partnership-section h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+}
+
+.partnership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    justify-content: center; /* Center items if not enough to fill grid */
+}
+
+.partnership-item {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.partnership-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.partnership-item img {
+    width: 60px; /* Adjust icon size */
+    height: 60px;
+    margin-bottom: 25px;
+}
+
+.partnership-item h3 {
+    font-size: 1.6em;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+/* --- Newsletter Section --- */
+.newsletter-section {
+    padding: 80px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: var(--secondary-color); /* A nice accent color */
+    color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.newsletter-banner {
+    flex: 1 1 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2; /* Puts image on right for larger screens */
+}
+
+.newsletter-banner img {
+    width: 80px; /* Adjust icon size */
+    height: 80px;
+    filter: invert(1); /* Makes the icon white if it's black */
+}
+
+.newsletter-content {
+    flex: 2 1 400px; /* Allows content to take more space */
+    text-align: left;
+    padding: 20px;
+    order: 1; /* Puts content on left for larger screens */
+}
+
+.newsletter-content h2 {
+    font-size: 2.2em;
+    color: var(--white);
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Allows input and button to wrap */
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1 1 250px; /* Allows input to grow */
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+.newsletter-form button {
+    padding: 15px 30px;
+    background-color: var(--primary-color); /* Use primary for button */
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #216d25; /* Darker green on hover */
+}
+
+/* Responsive adjustments for the new sections */
+@media (max-width: 768px) {
+    .cta-section,
+    .testimonial-section,
+    .newsletter-section {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+    }
+
+    .cta-content,
+    .testimonial-content,
+    .newsletter-content {
+        text-align: center;
+    }
+
+    .newsletter-banner {
+        order: 1; /* Move banner to top on smaller screens */
+    }
+
+    .newsletter-content {
+        order: 2; /* Move content below banner */
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: stretch; /* Make items full width */
+    }
+
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        width: 100%; /* Full width for input and button */
+    }
+
+    .author-info {
+        justify-content: center; /* Center author info */
+    }
+}
